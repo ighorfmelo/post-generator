@@ -1,6 +1,6 @@
 <template>
   <div class="image-background">
-    <img class="background" :src="`../assets/${background}`" alt="">
+    <img class="background" :src="`../../static/assets/${background}`" alt="">
     <h1 v-text="title" :class="`post-h1-${postType}`" />
     <h2 v-text="price" :class="`post-h2-${postType}`" />
     <img class="image" :src="image" alt="">

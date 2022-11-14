@@ -182,13 +182,13 @@ button:disabled {
   border: 1px solid black;
 }
 .first-option {
-  background-image: url('../assets/post_yellow.png');
+  background-image: url('../static/assets/post_yellow.png');
   background-size: cover;
   width: 10px;
   padding: 20px;
 }
 .second-option {
-  background-image: url('../assets/post_pink.png');
+  background-image: url('../static/assets/post_pink.png');
   background-size: cover;
   width: 10px;
   padding: 20px;
