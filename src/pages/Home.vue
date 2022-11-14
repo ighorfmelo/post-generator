@@ -182,19 +182,24 @@ button:disabled {
   border: 1px solid black;
 }
 .first-option {
+  background: white;
   background-image: url('../static/assets/post_yellow.png');
   background-size: cover;
   width: 10px;
   padding: 20px;
 }
 .second-option {
+  background: white;
   background-image: url('../static/assets/post_pink.png');
   background-size: cover;
   width: 10px;
   padding: 20px;
 }
 .third-option {
-  background: green;
+  background: white;
+  background-image: url('../static/assets/post_black.png');
+  background-size: cover;
+  width: 10px;
   padding: 20px;
 }
 

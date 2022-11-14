@@ -17,7 +17,7 @@ export default {
     postType: Number,
   },
   data: () => ({
-    images: ['post_yellow.png', 'post_pink.png']
+    images: ['post_yellow.png', 'post_pink.png', 'post_black.png']
   }),
   computed: {
     background() {
@@ -82,6 +82,18 @@ export default {
   .post-h2-1 {
     bottom: 55px;
     right: 20px;
+  }
+
+  .post-h1-2 {
+    bottom: 5px;
+    color: white;
+  }
+
+
+  .post-h2-2 {
+    top: 55px;
+    color: white;
+    right: 25px;
   }
 
   .image {
