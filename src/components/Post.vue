@@ -1,10 +1,9 @@
 <template>
-  <div class="image-background" :style="{background: postColor}">
-    <h1 v-text="title" />
-    <h2 v-text="price" />
-    <div class="image-container" >
-      <img :src="image" alt="">
-    </div>
+  <div class="image-background">
+    <img class="background" :src="`../src/assets/${background}`" alt="">
+    <h1 v-text="title" :class="`post-h1-${postType}`" />
+    <h2 v-text="price" :class="`post-h2-${postType}`" />
+    <img class="image" :src="image" alt="">
   </div>
 </template>
 
@@ -15,7 +14,15 @@ export default {
     title: String,
     price: String,
     image: String,
-    postColor: String,
+    postType: Number,
+  },
+  data: () => ({
+    images: ['post_yellow.png', 'post_pink.png']
+  }),
+  computed: {
+    background() {
+      return this.images[this.postType]
+    }
   }
 }
 </script>
@@ -30,38 +37,58 @@ export default {
     background: blue;
     align-items: center;
   }
+  .background {
+    z-index: 3;
+    width: 300px;
+    height: 300px;
+  }
   h1 {
+    font-family: 'Pacifico', 'Arial';
+    font-weight: bold;
     font-size: 26px;
     padding: 5%;
-    text-align: left;
     position: absolute;
-    top: 0;
-    left: 0;
+    transform: rotate(-5deg);
     margin: 0;
-    color: white;
+    color: black;
     z-index: 3;
   }
 
   h2 {
-    padding: 5%;
+    font-family: 'Pacifico', 'Arial';
+    transform: rotate(-5deg);
     position: absolute;
-    color: white;
+    color: black;
     margin: 0;
     z-index: 3;
-    bottom: 0;
-    right: 0;
-  }
-  .image-container {
-    border-radius: 50%;
-    position: absolute;
-    overflow: hidden;
-    width: calc(100% - 30%);
-    height: calc(100% - 30%);
   }
 
-  img {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  .post-h1-0 {
+    bottom: 0;
+  }
+
+
+  .post-h2-0 {
+    top: 60px;
+    right: 10px;
+  }
+
+  .post-h1-1 {
+    top: 5px;
+    color: white;
+  }
+
+
+  .post-h2-1 {
+    bottom: 55px;
+    right: 20px;
+  }
+
+  .image {
+    z-index: 2;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
   }
 </style>
